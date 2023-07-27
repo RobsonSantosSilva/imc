@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora de IMC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid bg-primary p-2">
+          <a class="navbar-brand text-light p-1 text-decoration-underline fs-5" href="index.html">Calculadora de IMC</a>
+        </div>
+      </nav>
+      <main class="my-2">
+
+        <div class="top-content">
+            <p class="fs-4 ms-3">IMC</p>
+            <small>Calculo do Índice de Massa Corporal</small>
+        </div>
+
+        <div class="panel-body p-4 row">
+
+            <div class="col">
+              <h4 class="fs-5 mb-2">Informações do Paciente</h4>
+              <label for="peso"><strong>Peso</strong></label>
+              <input type="number" id="peso" class="mb-3" name="peso"> <span> Kg</span>
+              <label for="altura"><strong>Altura</strong></label>
+              <input type="number" id="altura" name="altura" placeholder="Lembre-se de usar ponto ao invés de vírgula"> <span> m</span>
+
+              <div class="idoso">
+                <input type="radio" name="xyz" id="ehIdoso">
+                <label for="ehIdoso">Idoso: idade > 65 anos</label>
+              </div>
+
+              <div class="adulto">
+                <input type="radio" name="xyz" id="ehAdulto">
+                <label for="ehAdulto">Adulto: idade <= 65 anos</label>
+              </div>
+
+              <button onclick="calculaIMC()">CALCULAR</button>
+            </div>
+              
+            <div class="body-result col">
+              <p id="result"></p>
+              <p id="alt_pes"></p> <br>
+              <p id="imc_result"></p> <br>
+              <p id="description"></p>
+              <p id="ideal"></p>
+            </div>
+        </div>
+
+      </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
